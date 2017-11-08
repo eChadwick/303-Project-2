@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace _303_Project_2
 {
-    class Program
+    class BinaryTree<T>
     {
-        static void Main(string[] args)
-        {
-            var test = new BinaryTree<char>();
-            int y = 0;
-        }
+        BTNode<T> root;
+    }
+
+    class BTNode<T> {
+        T data;
+        BTNode<T> left;
+        BTNode<T> right;
     }
 }
