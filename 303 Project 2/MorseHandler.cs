@@ -10,8 +10,7 @@ namespace _303_Project_2
     class MorseHandler
     {
         void IngestData() { }
-        string Decode(string input) { return ""; }
-        string Encode(string input) { return ""; }
+        String Decode(string input) { return ""; }
 
         List<string> morse_codes;
         BinaryTree<char> decoding_tree;
@@ -24,6 +23,15 @@ namespace _303_Project_2
                 String morse = line.Substring(1);
                 morse_codes[alpha - 'a'] = morse;
             }
+        }
+
+        String Encode(String input)
+        {
+            var code = new List<String>(input.Count());
+            foreach (Char c in input)
+                code.Add(morse_codes[c - 'a']);
+
+            return String.Join(" ", code);
         }
     }
 }
