@@ -8,9 +8,9 @@ namespace _303_Project_2
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main(String[] args)
         {
-            var test = new BinaryTree<char>();
+            var test = new MorseHandler("morse.txt");
             int y = 0;
         }
     }
