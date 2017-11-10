@@ -6,13 +6,16 @@ using System.Text;
 namespace _303_Project_2
 {
     /// <summary>
-    /// 
+    /// Class to handle encoding of a word in alpha characters to morse code or decoding of a morse word  to alpha characters.
     /// </summary>
     class MorseHandler
     {
         String[] morse_codes = new String[26];
         BinaryTree<Char> decoding_tree = new BinaryTree<Char>();
-
+        /// <summary>
+        /// Constructs a MorseHandler using the given morse code translation file.
+        /// </summary>
+        /// <param name="path">Path to translation file.</param>
         public MorseHandler(String path)
         {
             foreach (String line in File.ReadLines(path))
