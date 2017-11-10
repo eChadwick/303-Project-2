@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace _303_Project_2
 {
@@ -11,7 +7,10 @@ namespace _303_Project_2
         static void Main(String[] args)
         {
             var test = new MorseHandler("morse.txt");
-            int y = 0;
+            Console.WriteLine(test.Encode("elephant"));
+            Console.WriteLine(test.Decode(test.Encode("elephant")));
+            Console.WriteLine("Press Enter to exit.");
+            Console.ReadLine();
         }
     }
 }
