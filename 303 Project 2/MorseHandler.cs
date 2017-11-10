@@ -13,6 +13,10 @@ namespace _303_Project_2
         String[] morse_codes = new String[26];
         BinaryTree<Char> decoding_tree = new BinaryTree<Char>();
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="path"></param>
         public MorseHandler(String path)
         {
             foreach (String line in File.ReadLines(path))
@@ -42,6 +46,11 @@ namespace _303_Project_2
             }
         }
 
+        /// <summary>
+        /// Encodes a word into morse code
+        /// </summary>
+        /// <param name="input">Word to encode</param>
+        /// <returns>Encoded morse code</returns>
         public String Encode(String input)
         {
             var code = new List<String>(input.Length);
@@ -51,6 +60,11 @@ namespace _303_Project_2
             return String.Join(" ", code);
         }
 
+        /// <summary>
+        /// Decodes a morse code string into a word
+        /// </summary>
+        /// <param name="input">Morse code to decode</param>
+        /// <returns>Decoded word</returns>
         public String Decode(String input)
         {
             var builder = new StringBuilder();
